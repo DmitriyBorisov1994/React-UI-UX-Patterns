@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CheckBox } from "../CheckBox/CheckBox";
+import styles from "./TreeView.module.scss";
 
 interface TreeNode {
   id: number;
@@ -31,18 +32,21 @@ const TreeNodeComponent: React.FC<TreeNodeComponentProps> = ({
 
   return (
     <div style={{ marginLeft: "20px" }}>
-      <div>
+      <div className={styles.treeViewItem}>
+        <span
+          onClick={handleToggle}
+          style={{ cursor: "pointer" }}
+          data-open={isOpen}
+          data-hasChildren={node.children ? true : false}
+        ></span>
         <CheckBox
           checked={checked}
           onToggle={(val) => onToggle(node.id, val, parentId)}
           label={node.label}
         />
-        <span onClick={handleToggle} style={{ cursor: "pointer" }}>
-          {node.children && (isOpen ? "-" : "+")}
-        </span>
       </div>
       {isOpen && node.children && (
-        <div>
+        <div className={styles.treeItemChild} data-open={isOpen}>
           {node.children.map((child) => (
             <TreeNodeComponent
               key={child.id}

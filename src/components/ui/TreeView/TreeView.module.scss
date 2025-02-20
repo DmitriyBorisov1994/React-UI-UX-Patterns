@@ -1,0 +1,10 @@
+.treeViewItem span[data-open] {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  background-color: red;
+}
+.treeViewItem span[data-open="true"] {
+  background-color: blue;
+  transform: rotate(90deg);
+}

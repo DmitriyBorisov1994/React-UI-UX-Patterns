@@ -1,0 +1,19 @@
+.pattern-list {
+  display: grid;
+  row-gap: 50px;
+  transition: all 200ms ease-in;
+}
+
+@media screen and (min-width: 60em) {
+  .pattern-list {
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  .pattern-list {
+    grid-template-columns: 32% 32% 32%;
+    column-gap: 2%;
+  }
+}

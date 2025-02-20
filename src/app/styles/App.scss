@@ -1,0 +1,75 @@
+@import './colors.scss';
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: $background;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  margin: .5rem 0rem;
+}
+
+a {
+  font-weight: 500;
+  color: $link;
+  text-decoration: inherit;
+}
+a:hover {
+  color: $link-hover;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.main{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  text-align: left;
+}
+.search-section{
+  border: 1px solid $border;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: $foreground;
+}
+
